@@ -1099,9 +1099,11 @@ button.w2ui-btn-small:focus:before {
   top: 0px;
   left: 0px;
   bottom: 0px;
-  width: 110px;
-  overflow: hidden;
+  width: 88px;
+  overflow-x: hidden;
+  overflow-y: auto;
   padding-top: 5px;
+  text-align: center;
   border-right: 1px solid #c0c0c0;
 }
 .w2ui-calendar .w2ui-calendar-jump > :last-child {
@@ -1109,11 +1111,9 @@ button.w2ui-btn-small:focus:before {
   top: 0px;
   right: 0px;
   bottom: 0px;
-  width: 88px;
-  overflow-x: hidden;
-  overflow-y: auto;
+  width: 110px;
+  overflow: hidden;
   padding-top: 5px;
-  text-align: center;
 }
 .w2ui-calendar .w2ui-calendar-jump .w2ui-jump-month,
 .w2ui-calendar .w2ui-calendar-jump .w2ui-jump-year {
