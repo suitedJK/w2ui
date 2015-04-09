@@ -1582,7 +1582,7 @@
                                                 setTimeout(function () { refreshCalendar(parseInt(selMonth)+1, selYear); }, 100);
                                             }
                                         });
-                                    $('#w2ui-overlay .w2ui-calendar-jump >:last-child').prop('scrollTop', 2000);
+                                    $('#w2ui-overlay .w2ui-calendar-jump >:first-child').prop('scrollTop', 2000);
                                 }, 1);
                             }
                         });
@@ -2401,7 +2401,7 @@
                 '<div class="w2ui-calendar-title title">'+
                 '    <div class="w2ui-calendar-previous previous"> <div></div> </div>'+
                 '    <div class="w2ui-calendar-next next"> <div></div> </div> '+
-                        months[month-1] +', '+ year +
+                        year +', '+ months[month-1] +
                 '</div>'+
                 '<table class="w2ui-calendar-days" cellspacing="0">'+
                 '    <tr class="w2ui-day-title">' + dayTitle + '</tr>'+
@@ -2470,7 +2470,7 @@
             for (var y = start_year; y <= end_year; y++) {
                 yhtml += '<div class="w2ui-jump-year" name="'+ y +'">'+ y + '</div>';
             }
-            return '<div>'+ mhtml +'</div><div>'+ yhtml +'</div>';
+            return '<div>'+ yhtml +'</div><div>'+ mhtml +'</div>';
         },
 
         getHourHTML: function () {
