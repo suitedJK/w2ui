@@ -50,6 +50,8 @@
         "between" : "範囲",
         "Add new record" : "新規レコードの追加",
         "Add New" : "追加",
+        "Edit" : "編集",
+        "Edit selected record" : "選択したレコードの編集",
         "Delete selected records" : "選択したレコードの削除",
         "Delete" : "削除",
         "Save changed records" : "変更したレコードの保存",
