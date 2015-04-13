@@ -168,10 +168,10 @@ var w2popup = {};
                 w2popup.lockScreen(options);
                 var btn = '';
                 if (options.showClose) {
-                    btn += '<div class="w2ui-msg-button w2ui-msg-close" onmousedown="event.stopPropagation()" onclick="w2popup.close()">Close</div>';
+                    btn += '<div class="w2ui-msg-button w2ui-msg-close" onmousedown="event.stopPropagation()" onclick="w2popup.close()" title="'+w2utils.lang('Close')+'">'+w2utils.lang('Close')+'</div>';
                 }
                 if (options.showMax) {
-                    btn += '<div class="w2ui-msg-button w2ui-msg-max" onmousedown="event.stopPropagation()" onclick="w2popup.toggle()">Max</div>';
+                    btn += '<div class="w2ui-msg-button w2ui-msg-max" onmousedown="event.stopPropagation()" onclick="w2popup.toggle()" title="'+w2utils.lang('Max')+'>'+w2utils.lang('Max')+'</div>';
                 }
                 var msg='<div id="w2ui-popup" class="w2ui-popup" style="opacity: 0; left: '+ left +'px; top: '+ top +'px;'+
                         '     width: ' + parseInt(options.width) + 'px; height: ' + parseInt(options.height) + 'px; '+
