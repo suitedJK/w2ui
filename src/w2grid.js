@@ -188,7 +188,7 @@
         // internal
         this.last = {
             field     : 'all',
-            caption   : w2utils.lang('All Fields'),
+            caption   : w2utils.lang('search'),
             logic     : 'OR',
             search    : '',
             searchIds : [],
