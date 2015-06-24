@@ -5220,7 +5220,7 @@
                                '    oncontextmenu = "w2ui[\''+ obj.name +'\'].contextMenu(null, '+ ii +', event);"'+
                                '    onclick="w2ui[\''+ obj.name +'\'].columnClick(\''+ col.field +'\', event);">'+
                                    resizer +
-                               '    <div class="w2ui-col-group w2ui-col-header '+ (sortStyle ? 'w2ui-col-sorted' : '') +'">'+
+                               '    <div class="w2ui-col-group w2ui-col-header '+ (sortStyle ? 'w2ui-col-sorted' : '') +'"'+ (!col.headerStyle ? '' : ' style="'+col.headerStyle+'"') +'>'+
                                '        <div class="'+ sortStyle +'"></div>'+
                                        (!col.caption ? '&nbsp;' : col.caption) +
                                '    </div>'+
@@ -5299,7 +5299,7 @@
                                 '    oncontextmenu = "w2ui[\''+ obj.name +'\'].contextMenu(null, '+ i +', event);"'+
                                 '    onclick="w2ui[\''+ obj.name +'\'].columnClick(\''+ col.field +'\', event);">'+
                                     resizer +
-                                '    <div class="w2ui-col-header '+ (sortStyle ? 'w2ui-col-sorted' : '') +'">'+
+                                '    <div class="w2ui-col-header '+ (sortStyle ? 'w2ui-col-sorted' : '') +'"'+ (!col.headerStyle ? '' : ' style="'+col.headerStyle+'"') +'>'+
                                 '        <div class="'+ sortStyle +'"></div>'+
                                         (!col.caption ? '&nbsp;' : col.caption) +
                                 '    </div>'+
