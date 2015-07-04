@@ -1465,7 +1465,7 @@ w2utils.event = {
                     if (options.maxHeight && maxHeight > options.maxHeight) maxHeight = options.maxHeight;
                     if (h > maxHeight) {
                         overflowY = true;
-                        div2.height(maxHeight).width(w).css({ 'overflow-y': 'auto' });
+                        div2.height(maxHeight).width(w + w2utils.scrollBarSize()).css({ 'overflow-y': 'auto' });
                         h = maxHeight;
                     }
                     div1.css('top', (offsetTop - h - tipOffset + options.top) + 'px');
@@ -1478,7 +1478,7 @@ w2utils.event = {
                     if (options.maxHeight && maxHeight > options.maxHeight) maxHeight = options.maxHeight;
                     if (h > maxHeight) {
                         overflowY = true;
-                        div2.height(maxHeight).width(w).css({ 'overflow-y': 'auto' });
+                        div2.height(maxHeight).width(w + w2utils.scrollBarSize()).css({ 'overflow-y': 'auto' });
                     }
                     div1.find('>style').html(
                         '#w2ui-overlay'+ name +':before { display: block; margin-left: '+ parseInt(tipLeft) +'px; }'+
