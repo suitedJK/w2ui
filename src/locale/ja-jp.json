@@ -21,12 +21,12 @@
         "Attach files by dragging and dropping or Click to Select" : "ドラッグアンドドロップかクリックしてファイルを選択してください。",
         "Remove" : "削除の確認",
         "Not a valid date" : "正しい日付ではありません",
-        "Required field" : "必須項目",
+        "Required field" : "入力してください",
         "Saving..." : "保存中…",
         "Not an integer" : "整数値ではありません",
-        "Not a float" : "小数値ではりません",
+        "Not a float" : "小数値ではありません",
         "Not in money format" : "金額ではありません",
-        "Not a hex number" : "16進数ではありませｎ",
+        "Not a hex number" : "16進数ではありません",
         "Not alpha-numeric" : "英文字ではありません",
         "Not a valid email" : "Emailアドレスではありません",
         "Are you sure you want to delete selected records?" : "選択したレコードを削除してもよろしいですか？",
@@ -85,6 +85,8 @@
         "Line #" : "行数 #",
         "Close" : "閉じる",
         "Max" : "最大化",
-        "search" : "検索"
+        "search" : "検索",
+        "Please input more than %min% characters" : "%min%文字以上で入力してください",
+        "Please input less than %max% characters" : "%max%文字以内で入力してください"
     }
 }
