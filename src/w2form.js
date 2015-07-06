@@ -348,6 +348,17 @@
                 if (field.equalto && this.record[field.name] != this.record[field.equalto]) {
                     errors.push({ field: field, error: w2utils.lang('Field should be equal to ') + field.equalto });
                 }
+                if (typeof field.length == 'object') {
+                    var len = val.length;
+                    var min = field.length.min;
+                    var max = field.length.max;
+                    if (min && len < min) {
+                        errors.push({ field: field, error: w2utils.lang('Please input more than %min% characters').replace('%min%', min) });
+                    }
+                    if (max && len > max) {
+                        errors.push({ field: field, error: w2utils.lang('Please input less than %max% characters').replace('%max%', max) });
+                    }
+                }
             }
             // event before
             var eventData = this.trigger({ phase: 'before', target: this.name, type: 'validate', errors: errors });
