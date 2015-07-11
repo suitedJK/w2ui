@@ -170,10 +170,10 @@
     // -- Implementation of core functionality
 
     w2form.prototype = {
-        msgNotJSON    : w2utils.lang('Return data is not in JSON format.'),
-        msgAJAXerror  : w2utils.lang('AJAX error. See console for more details.'),
-        msgRefresh    : w2utils.lang('Refreshing...'),
-        msgSaving     : w2utils.lang('Saving...'),
+        msgNotJSON    : 'Return data is not in JSON format.',
+        msgAJAXerror  : 'AJAX error. See console for more details.',
+        msgRefresh    : 'Refreshing...',
+        msgSaving     : 'Saving...',
 
         get: function (field, returnIndex) {
             if (arguments.length === 0) {
@@ -426,7 +426,7 @@
             this.record   = {};
             this.original = {};
             // call server to get data
-            this.lock(this.msgRefresh);
+            this.lock(w2utils.lang(this.msgRefresh));
             var url = eventData.url;
             if (typeof eventData.url == 'object' && eventData.url.get) url = eventData.url.get;
             if (this.last.xhr) try { this.last.xhr.abort(); } catch (e) {}
@@ -490,7 +490,7 @@
                             if (typeof data == 'undefined') {
                                 data = {
                                     status       : 'error',
-                                    message      : obj.msgNotJSON,
+                                    message      : w2utils.lang(obj.msgNotJSON),
                                     responseText : responseText
                                 }
                             }
@@ -505,7 +505,7 @@
                         obj.error('AJAX Error ' + xhr.status + ': '+ xhr.statusText);
                         data = {
                             status       : 'error',
-                            message      : obj.msgAJAXerror,
+                            message      : w2utils.lang(obj.msgAJAXerror),
                             responseText : responseText
                         };
                     }
@@ -557,7 +557,7 @@
                 console.log("ERROR: Form cannot be saved because no url is defined.");
                 return;
             }
-            obj.lock(obj.msgSaving + ' <span id="'+ obj.name +'_progress"></span>');
+            obj.lock(w2utils.lang(obj.msgSaving) + ' <span id="'+ obj.name +'_progress"></span>');
             // need timer to allow to lock
             setTimeout(function () {
                 // build parameters list
@@ -650,7 +650,7 @@
                                 if (typeof data == 'undefined') {
                                     data = {
                                         status       : 'error',
-                                        message      : obj.msgNotJSON,
+                                        message      : w2utils.lang(obj.msgNotJSON),
                                         responseText : responseText
                                     }
                                 }
@@ -664,7 +664,7 @@
                             obj.error('AJAX Error ' + xhr.status + ': '+ xhr.statusText);
                             data = {
                                 status       : 'error',
-                                message      : obj.msgAJAXerror,
+                                message      : w2utils.lang(obj.msgAJAXerror),
                                 responseText : responseText
                             };
                         }
